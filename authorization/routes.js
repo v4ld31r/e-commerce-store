@@ -17,7 +17,8 @@ router.post(
 );
 
 router.post(
-  "/auth",
+  "/login-1",
+  "/login-2",
   [SchemaValidationMiddleware.verify(loginPayload)],
   AuthorizationController.login
 );
