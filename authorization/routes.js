@@ -11,13 +11,13 @@ const registerPayload = require("./schemas/registerPayload");
 const loginPayload = require("./schemas/loginPayload");
 
 router.post(
-  "/signup",
+  "/register",
   [SchemaValidationMiddleware.verify(registerPayload)],
   AuthorizationController.register
 );
 
 router.post(
-  "/login",
+  "/auth",
   [SchemaValidationMiddleware.verify(loginPayload)],
   AuthorizationController.login
 );
